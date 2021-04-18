@@ -1,8 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Counter from "features/counter/Counter";
+import Tet from "features/tet/Tet";
 
 function App() {
+  useEffect(() => {
+    console.log("RENDERUJE SIE APP");
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +23,8 @@ function App() {
         >
           Learn React
         </a>
+        <Counter />
+        <Tet />
       </header>
     </div>
   );
